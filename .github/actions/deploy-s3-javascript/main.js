@@ -11,7 +11,7 @@ function run() {
 
     // 2. upload files
     const s3Url = `s3://${bucket}`
-    exec.exec('aws s3 sync ${distFolder} ${s3Url} --region ${bucketRegion}');
+    exec.exec(`aws s3 sync ${distFolder} ${s3Url} --region ${bucketRegion}`);
 
     core.notice("Hello from the deploy-s3-javascript action!");
 }
